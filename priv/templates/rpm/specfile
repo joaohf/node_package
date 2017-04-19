@@ -80,7 +80,7 @@ EOF
 OVERLAY_VARS="rpm.vars.config" make rel
 
 %install
-%define relpath       %{_builddir}/%{buildsubdir}/_build/default/rel/{{package_install_name}}
+%define relpath       %{_builddir}/%{buildsubdir}/_build/{{rebar_profile}}/rel/{{package_install_name}}
 %define buildroot_lib %{buildroot}%{_libdir}/{{package_install_name}}
 %define buildroot_etc %{buildroot}%{_sysconfdir}/{{package_install_name}}
 %define buildroot_share %{buildroot}%{_datarootdir}/{{package_install_name}}
